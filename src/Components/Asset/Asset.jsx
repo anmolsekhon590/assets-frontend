@@ -106,15 +106,15 @@ export default function Asset(props) {
                 <form className="text-black bg-white p-2 rounded-md" onSubmit={handleSubmit(onEditSubmit)}>
                     <div className="mb-2">
                         <label htmlFor="name">Name: </label>
-                        <input className="border-2 w-full rounded-md p-1" type="text" name="name" {...register("name")} defaultValue={asset.name} />
+                        <input className="border-2 w-full rounded-md p-1" type="text" name="name" {...register("name")} defaultValue={asset.name} required />
                     </div>
                     <div className="mb-2">
                         <label htmlFor="description">Description: </label>
-                        <input className="border-2 w-full rounded-md p-1" type="text" name="description" {...register("description")} defaultValue={asset.description} />
+                        <input className="border-2 w-full rounded-md p-1" type="text" name="description" {...register("description")} defaultValue={asset.description} required />
                     </div>
                     <div className="mb-2">
                         <label htmlFor="price">Price: </label>
-                        <input className="border-2 w-full rounded-md p-1" type="number" name="price" {...register("priceValue")} defaultValue={asset.priceValue} step="0.01" />
+                        <input className="border-2 w-full rounded-md p-1" type="number" name="price" {...register("priceValue")} defaultValue={asset.priceValue} step="0.01" min="0.01" required />
                     </div>
                     <div className="mb-2">
                         <label htmlFor="assetType">Asset Type: </label>

@@ -127,23 +127,23 @@ export default function Assets() {
                     <form className="text-black bg-white p-2 rounded-md" onSubmit={handleSubmit(onAddSubmit)}>
                         <div className="mb-2">
                             <label htmlFor="name">Name: </label>
-                            <input className="border-2 w-full rounded-md p-1" type="text"  {...register("name")} />
+                            <input className="border-2 w-full rounded-md p-1" type="text"  {...register("name")} required />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="description">Description: </label>
-                            <input className="border-2 w-full rounded-md p-1" type="text"  {...register("description")} />
+                            <input className="border-2 w-full rounded-md p-1" type="text"  {...register("description")} required />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="price">Price: </label>
-                            <input className="border-2 w-full rounded-md p-1" type="number"  {...register("priceValue")} step="0.01" />
+                            <input className="border-2 w-full rounded-md p-1" type="number"  {...register("priceValue")} step="0.01" min="0.01" required />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="purchaseDate">Price: </label>
-                            <input className="border-2 w-full rounded-md p-1" type="date"  {...register("purchaseDate")} />
+                            <input className="border-2 w-full rounded-md p-1" type="date"  {...register("purchaseDate")} required />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="assetType">Asset Type: </label>
-                            <select className="p-1 w-full rounded-md border-2"  {...register("assetTypeId")}>
+                            <select className="p-1 w-full rounded-md border-2"  {...register("assetTypeId")} >
                                 <option value={0} >Software</option>
                                 <option value={1} >Hardware</option>
                             </select>
