@@ -123,8 +123,8 @@ export default function Assets() {
 
                 {/* Add Asset Form with all input fields */}
                 <div className={"m-3 " + addformVisible}>
-
                     <form className="text-black bg-white p-2 rounded-md" onSubmit={handleSubmit(onAddSubmit)}>
+                        <h3 className="text-center text-2xl">Add Menu: </h3>
                         <div className="mb-2">
                             <label htmlFor="name">Name: </label>
                             <input className="border-2 w-full rounded-md p-1" type="text"  {...register("name")} required />

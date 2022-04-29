@@ -104,6 +104,7 @@ export default function Asset(props) {
             <div className={editMenuVisible + " mt-2"}>
                 {/* A form to take input for changes - It will autoload existing info about the asset in fields */}
                 <form className="text-black bg-white p-2 rounded-md" onSubmit={handleSubmit(onEditSubmit)}>
+                    <h3 className="text-2xl text-center">Edit Menu:</h3>
                     <div className="mb-2">
                         <label htmlFor="name">Name: </label>
                         <input className="border-2 w-full rounded-md p-1" type="text" name="name" {...register("name")} defaultValue={asset.name} required />
