@@ -34,6 +34,14 @@ export default function Assets() {
             }
         }).then(res => {
             setAddformVisible("hidden");
+            assets.push({
+                assetId: null,
+                name: e.name,
+                description: e.description,
+                priceValue: e.priceValue,
+                purchaseDate: e.purchaseDate,
+                assetTypeId: e.assetTypeId
+            })
             console.log(res)
         }).catch(res => {
             console.log(res)
@@ -101,6 +109,7 @@ export default function Assets() {
 
         return (
             <div>
+                {/* A redirect when user Logs out */}
                 {redirectUser && < Navigate replace to="/" />}
                 {/* A Button to add more Assets */}
                 <button className="mt-3 ml-3 mb-3 bg-color-2 p-2 w-20 rounded-md text-color-4" type="button" onClick={handleAddBtn}>
@@ -126,7 +135,7 @@ export default function Assets() {
                         </div>
                         <div className="mb-2">
                             <label htmlFor="price">Price: </label>
-                            <input className="border-2 w-full rounded-md p-1" type="number"  {...register("priceValue")} step="0.1" />
+                            <input className="border-2 w-full rounded-md p-1" type="number"  {...register("priceValue")} step="0.01" />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="purchaseDate">Price: </label>
