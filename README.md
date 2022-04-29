@@ -15,12 +15,13 @@ $ npm install
 ```
 
 # Building
+A production build can be created by running the follwing command in the project root directory:
 ```shell
 $ npm run build
 ```
 
 # Docker
-A Dockerfile has been included in this project. To build a Docker image run in root directory:
+A Dockerfile has been included in this project. To build a Docker image run the follwing command in the project root directory:
 
 ```shell
 $ docker build -t assets_frontend .
