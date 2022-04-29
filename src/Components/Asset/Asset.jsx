@@ -91,7 +91,7 @@ export default function Asset(props) {
             <div>
                 <p>Name: {asset.name}</p>
                 <p>Description: {asset.description}</p>
-                <p>Price: ${asset.priceValue}</p>
+                <p>Price: ${(Math.round(asset.priceValue * 100) / 100).toFixed(2)}</p>
                 <p>Purchase date: {asset.purchaseDate}</p>
                 <p>Asset Type: {assetType[asset.assetTypeId]}</p>
                 <div className="flex">
