@@ -151,7 +151,7 @@ export default function Assets() {
 
                         <div className="mt-5">
                             <button className="bg-grey p-2 rounded-md mr-5 shadow-grey shadow-md" type="button" onClick={handleCancelBtn} >Cancel</button>
-                            <button className="bg-color-1 text-color-4 p-2 rounded-md shadow-color-4 shadow-md" type="submit">Save Changes</button>
+                            <button className="bg-color-1 text-color-4 p-2 rounded-md shadow-color-4 shadow-md px-6" type="submit">Add</button>
                         </div>
                     </form>
 
